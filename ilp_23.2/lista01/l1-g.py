@@ -1,5 +1,10 @@
-event_time_seconds: int = int(input())
-hours, remainder = divmod(event_time_seconds, 3600)
-minutes, seconds = divmod(remainder, 60)
+tempo_em_segundos: int = int(input())
 
-print(f"{hours}h {minutes}m {seconds}s")
+horas: int = tempo_em_segundos // 3600
+sobra = tempo_em_segundos % 3600
+
+minutos: int = sobra // 60
+
+segundos: int = sobra % 60
+
+print(f"{horas}h {minutos}m {segundos}s")
